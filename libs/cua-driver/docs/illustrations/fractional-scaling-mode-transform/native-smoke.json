@@ -1,0 +1,116 @@
+{
+  "phase": "scaling",
+  "fixture_observations": {
+    "initial": {
+      "counter": 0,
+      "keys": []
+    },
+    "after_click": {
+      "counter": 1,
+      "keys": []
+    }
+  },
+  "get_screen_size": {
+    "exit": 0,
+    "keys": [
+      "height",
+      "scale_factor",
+      "width"
+    ]
+  },
+  "screen_metadata": {
+    "height": 1080,
+    "scale_factor": 1.3333333333333333,
+    "width": 2580
+  },
+  "get_desktop_state": {
+    "exit": 0,
+    "keys": [
+      "display",
+      "platform",
+      "scale_factor",
+      "screen_height",
+      "screen_width",
+      "screenshot_file_path",
+      "screenshot_height",
+      "screenshot_mime_type",
+      "screenshot_width"
+    ]
+  },
+  "desktop_png_dimensions": [
+    2580,
+    1080
+  ],
+  "screenshot_grounded_point": [
+    1072,
+    302
+  ],
+  "click": {
+    "exit": 0,
+    "keys": [
+      "delivery",
+      "effect",
+      "route"
+    ]
+  },
+  "list_windows": {
+    "exit": 0,
+    "keys": [
+      "windows"
+    ]
+  },
+  "fixture_window_count": 1,
+  "get_window_state": {
+    "exit": 0,
+    "keys": [
+      "_note",
+      "app_name",
+      "element_count",
+      "elements",
+      "elements_complete",
+      "pid",
+      "returned_element_count",
+      "screenshot_file_path",
+      "screenshot_height",
+      "screenshot_mime_type",
+      "screenshot_width",
+      "snapshot_id",
+      "total_element_count",
+      "tree_markdown",
+      "window_bounds",
+      "window_id",
+      "window_title"
+    ]
+  },
+  "window_png_dimensions": [
+    560,
+    757
+  ],
+  "window_crop_contains_fixture_marker": true,
+  "tested_sha": "a82ad99671f44a95bef7f24811bc17639902e2dc",
+  "native_environment": {
+    "compositor": "GNOME/Wayland",
+    "current_mode": [
+      3440,
+      1440
+    ],
+    "logical_size": [
+      2580,
+      1080
+    ],
+    "mutter_scale": 1.3333333730697632,
+    "rotation": 0,
+    "outputs": 1
+  },
+  "limitations": [
+    "Supplemental native smoke using the repository GTK3 fixture plus an independent journal and marker; not the canonical desktop matrix.",
+    "Mode-selection and rotated-output regressions are covered synthetically, not on a live rotated output.",
+    "No raw desktop captures are published."
+  ],
+  "window_bounds": {
+    "height": 757,
+    "width": 560,
+    "x": 1010,
+    "y": 184
+  }
+}
