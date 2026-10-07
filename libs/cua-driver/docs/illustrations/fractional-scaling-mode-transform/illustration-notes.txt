@@ -1,0 +1,3 @@
+AI-generated explanatory illustrations, not captured desktop evidence.
+Scaling: synthetic preferred/current and rotated-output mode examples.
+Shortcuts: illustrative code-editor Ctrl+comma settings workflow; physical-key mapping requires the matching keyboard layout and app binding.
