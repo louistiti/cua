@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.35.0](https://github.com/trycua/cua/compare/cua-driver-rs-v0.34.0...cua-driver-rs-v0.35.0) (2026-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cua-driver:** get_window_state no longer returns the structured `elements` array, `_note` or `background_input` by default, and caps the tree at 250 nodes. MCP and CLI callers that read `elements` or `_note` must pass `full_output: true` to keep the previous response, or ask for only the part they need: `tree_format: "elements"` (or `"both"`) for `elements`, `verbose: true` for `_note` and `background_input`, `max_elements` to lift the cap. The typed SDKs keep the full response unless a shape is requested.
+
+### Features
+
+* **cua-driver:** add run_actions batch tool (CUA-1194) ([#4737](https://github.com/trycua/cua/issues/4737)) ([a03d05b](https://github.com/trycua/cua/commit/a03d05b5f3c6a38de88893d9a5bc2b887aa85132))
+* **cua-driver:** get_window_state `since: <snapshot_id>` returns only the rows added, changed or removed since that snapshot, or `no change` (CUA-1193) ([#4743](https://github.com/trycua/cua/issues/4743)) ([45775a9](https://github.com/trycua/cua/commit/45775a9244df4a1e33090c1377eeb2448d2eb820))
+* **cua-driver:** get_window_state returns lean output by default: compact markdown only (no `elements`), at most 250 nodes unless `max_elements` is set, and no `_note` or `background_input` unless `verbose: true`; pass `full_output: true` for the previous full response; the typed SDKs keep the full response unless a shape is requested (CUA-1192) ([#4743](https://github.com/trycua/cua/issues/4743)) ([45775a9](https://github.com/trycua/cua/commit/45775a9244df4a1e33090c1377eeb2448d2eb820))
+* **cua-driver:** plan cursor motion with the new cua-cursor-motion crate ([#4758](https://github.com/trycua/cua/issues/4758)) ([558cb53](https://github.com/trycua/cua/commit/558cb534d26ad51680ffd0f85b249bdebe64989a))
+* **cua-driver:** plan cursor motions from the SDKs through UniFFI ([#4767](https://github.com/trycua/cua/issues/4767)) ([365f5e3](https://github.com/trycua/cua/commit/365f5e3c5b92f9457dbd560ddea8ec0268565724))
+
+
+### Bug Fixes
+
+* **cua-driver:** do not report a submitted type_text as partial delivery ([#4741](https://github.com/trycua/cua/issues/4741)) ([aa7a31a](https://github.com/trycua/cua/commit/aa7a31a5f3633249db69f766256b1749feb7a652))
+* **cua-driver:** on Linux, set_value selects GTK combo-box options through AT-SPI Selection, closes any popup its keyboard fallback opens, and no longer fails that fallback with action_outcome_mismatch ([#4775](https://github.com/trycua/cua/issues/4775)) ([598f6de](https://github.com/trycua/cua/commit/598f6de7a78c291d7bbc8c8845c65f43b1fccbb0))
+* **cua-driver:** on macOS, accept element_token without pid and say what to do after refusals ([#4739](https://github.com/trycua/cua/issues/4739)) ([3931962](https://github.com/trycua/cua/commit/3931962cc76f7f1f62774da9ad87696f48e31a5e))
+* **cua-driver:** on macOS, set_value selects options of AppKit and Chromium pop-up buttons ([#4740](https://github.com/trycua/cua/issues/4740)) ([8481162](https://github.com/trycua/cua/commit/848116252c5f3a1b6f5458e5454904b2780eb1f9))
+* **cua-driver:** on Windows and Linux, accept element_token without pid; a stale token is refused as stale_element_token ([#4773](https://github.com/trycua/cua/issues/4773)) ([12365b3](https://github.com/trycua/cua/commit/12365b36d41417cae34eb0f90b49e8eaf023ac51))
+* **cua-driver:** on Windows, set_value on a native combo box selects the option (or types into an editable one) so the app's change handlers run, and refuses an unknown option ([#4774](https://github.com/trycua/cua/issues/4774)) ([69ebe4b](https://github.com/trycua/cua/commit/69ebe4bfbac69778c1c03cdae1178f09f8144936))
+* **cua-driver:** post a background right click once on macOS ([#4690](https://github.com/trycua/cua/issues/4690)) ([0b90b6f](https://github.com/trycua/cua/commit/0b90b6f4af6885ecbe696a6b33a3ad63773183d4))
+* **cua-driver:** repair non-native Linux tool registry ([#4715](https://github.com/trycua/cua/issues/4715)) ([6f7ed59](https://github.com/trycua/cua/commit/6f7ed59138c36ff92370bda915dd99395c97b00a))
+* **cua-driver:** resolve latest release without the rate-limited REST API ([#4757](https://github.com/trycua/cua/issues/4757)) ([a2b3182](https://github.com/trycua/cua/commit/a2b3182eac9830d7935e8a459939ec9357a856b7)), closes [#4755](https://github.com/trycua/cua/issues/4755)
+
+
+### Performance Improvements
+
+* **cua-driver:** front-load efficient workflow, trim hot tool descriptions (CUA-1195, CUA-1198) ([#4742](https://github.com/trycua/cua/issues/4742)) ([c076293](https://github.com/trycua/cua/commit/c0762938ba76b4f2f03472e01fe7da9025fb3673))
+
 ## [0.34.0](https://github.com/trycua/cua/compare/cua-driver-rs-v0.33.4...cua-driver-rs-v0.34.0) (2026-10-05)
 
 
