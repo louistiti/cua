@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.3](https://github.com/trycua/cua/compare/cua-spaces-v0.7.2...cua-spaces-v0.7.3) (2026-10-07)
+
+
+### Bug Fixes
+
+* **spaces:** preserve live OS metadata and show unknown honestly ([#4671](https://github.com/trycua/cua/issues/4671)) ([f25fe36](https://github.com/trycua/cua/commit/f25fe3691e651cc8ac6adf92931940ed25d9a6bb))
+* **spaces:** report directory refresh failures ([#4716](https://github.com/trycua/cua/issues/4716)) ([1f96a4b](https://github.com/trycua/cua/commit/1f96a4bf0e3f02dcf79ab83d78a4fc9c017d24ff))
+
 ## [0.7.2](https://github.com/trycua/cua/compare/cua-spaces-v0.7.1...cua-spaces-v0.7.2) (2026-10-05)
 
 
