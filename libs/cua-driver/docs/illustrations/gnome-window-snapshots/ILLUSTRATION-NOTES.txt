@@ -1,0 +1,7 @@
+Created with the built-in image_gen tool using the imagegen skill.
+These are explanatory illustrations, not screenshots or live desktop test evidence.
+Scope: the GNOME/Wayland window snapshot parser.
+Before: gdbus display formatting adds escaping; extracting the JSON-looking substring without decoding can invalidate the complete snapshot. An unrelated Feishu window then lacks authoritative metadata.
+After: the proposed typed D-Bus call returns the original JSON string, preserving both window records, IDs and bounds.
+The desktop remains visible in both images. The overlays show metadata availability.
+The graphics depict the tested parser contract; live Feishu replay remains unverified.
