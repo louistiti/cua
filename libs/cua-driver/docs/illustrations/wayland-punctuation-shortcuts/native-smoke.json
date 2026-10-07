@@ -1,0 +1,177 @@
+{
+  "platform": "native GNOME/Wayland, libei input; repository GTK3 fixture with independent key journal",
+  "illustrations": "AI-generated explanations, not live app screenshots",
+  "after_sha": "a7373166225590bb301b71418990ce7377ee254a",
+  "before_sha": "a82ad99671f44a95bef7f24811bc17639902e2dc",
+  "before_version": "0.28.1, #3887 with scaling follow-up; punctuation mapping identical to upstream main for these keys",
+  "current_main_evidence": "Restoring the unmodified upstream mapping on the punctuation branch makes the focused regression fail: None != Some(51).",
+  "before": {
+    "fixture_observations": {
+      "initial": {
+        "counter": 0,
+        "keys": []
+      },
+      "after_shortcuts": {
+        "counter": 0,
+        "keys": []
+      }
+    },
+    "shortcut_attempts": [
+      {
+        "requested": [
+          "Ctrl",
+          ","
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": []
+        }
+      },
+      {
+        "requested": [
+          "Ctrl",
+          "/"
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": []
+        }
+      },
+      {
+        "requested": [
+          "Ctrl",
+          "Shift",
+          "/"
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": []
+        }
+      }
+    ],
+    "hotkey_0": {
+      "status": "refused: no evdev keycode mapping",
+      "requested_key": ","
+    },
+    "hotkey_1": {
+      "status": "refused: no evdev keycode mapping",
+      "requested_key": "/"
+    },
+    "hotkey_2": {
+      "status": "refused: no evdev keycode mapping",
+      "requested_key": "/"
+    }
+  },
+  "after": {
+    "fixture_observations": {
+      "initial": {
+        "counter": 0,
+        "keys": []
+      },
+      "after_shortcuts": {
+        "counter": 0,
+        "keys": [
+          {
+            "key": "comma",
+            "shift": false
+          },
+          {
+            "key": "slash",
+            "shift": false
+          },
+          {
+            "key": "question",
+            "shift": true
+          }
+        ]
+      }
+    },
+    "shortcut_attempts": [
+      {
+        "requested": [
+          "Ctrl",
+          ","
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": [
+            {
+              "key": "comma",
+              "shift": false
+            }
+          ]
+        }
+      },
+      {
+        "requested": [
+          "Ctrl",
+          "/"
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": [
+            {
+              "key": "comma",
+              "shift": false
+            },
+            {
+              "key": "slash",
+              "shift": false
+            }
+          ]
+        }
+      },
+      {
+        "requested": [
+          "Ctrl",
+          "Shift",
+          "/"
+        ],
+        "fixture_state": {
+          "counter": 0,
+          "keys": [
+            {
+              "key": "comma",
+              "shift": false
+            },
+            {
+              "key": "slash",
+              "shift": false
+            },
+            {
+              "key": "question",
+              "shift": true
+            }
+          ]
+        }
+      }
+    ],
+    "hotkey_0": {
+      "exit": 0,
+      "keys": [
+        "delivery",
+        "effect",
+        "route",
+        "summary"
+      ]
+    },
+    "hotkey_1": {
+      "exit": 0,
+      "keys": [
+        "delivery",
+        "effect",
+        "route",
+        "summary"
+      ]
+    },
+    "hotkey_2": {
+      "exit": 0,
+      "keys": [
+        "delivery",
+        "effect",
+        "route",
+        "summary"
+      ]
+    }
+  }
+}
